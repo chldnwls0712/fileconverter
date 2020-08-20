@@ -68,14 +68,14 @@ img {
     opacity: 0.8;
 }
 .cubetext {
-    font-size: 200px;
+    font-size: 10vw;
     line-height: 100px;
     height: 100px;
     font-family: monospace;
     opacity: 0.2;
 }
 .cubetext1 {
-    font-size: 50px;
+    font-size: 3vw;
     line-height: 100px;
     height: 100px;
     font-weight: 500;
