@@ -13,8 +13,10 @@
 			<a href="index.html">file converter</a>
 		</div>
 		<div class="language">
-			<a href="#eng" onclick='reloadFuc()'>English</a>
+			<a href="#eng" onclick='reloadFuc()'>English,</a>
+			<a href="#esp" onclick="reloadFuc()">Español,</a>
 			<a href="#kor" onclick='reloadFuc()'>한국어</a>
+			
 		</div>
 		<div class="banner">
 			<div class="banner-content">
@@ -25,7 +27,12 @@
 		</div>
 	</header>
 	<input type="file" name="files" id="files" accept=".jpeg,.jpg,.png" multiple />
-	<label class="drag" for="files">
+	<div class ="uploadBar">
+		<div class="image-preview" id="imagePreview">
+			
+		</div>
+	</div>
+	<label class="drag" for="files" id="dropbox">
         <div class="cubes">
             <div class="cube1"></div>
             <div class="cube2"></div>
@@ -34,7 +41,8 @@
         </div>
         <div>
             <p class="cubetext">+</p>
-            <p id ="fileText"class="cubetext1">Click to select the file.</p>
+			<p id ="fileText"class="cubetext1">Upload the file.</p>
+			<p id ="fileText1"class="cubetext2">(click or drag&drop)</p>
         </div>
 	</label>
 	<div class="footer">
@@ -45,5 +53,6 @@
 		</div>
 	</div>
 	<script src="./codes/js/language.js"></script>
+	<script src="./codes/js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/*page decoration*/
 html, body {
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@ table,tr,td,input,a,dl,dt,dd {
     list-style: none;
     text-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px;
 }
+/*TOP of the page*/
 .logo {
     overflow: hidden;
     background-color: #B3C8C8;
@@ -32,6 +34,17 @@ table,tr,td,input,a,dl,dt,dd {
     background-color: #ddd;
     color: #f2f2f2;
 }
+.language, .language a {
+    text-decoration: none;
+    font-size: 1.7vw;
+    text-align: center;
+    color: #2b82df;
+}
+.language a:hover{
+    color: #5D6D7E;
+    background-color: #B3C8C8;
+}
+/*MIDDLE of the page*/
 .banner{
     background-color: #dbdee0;
     color: #5D6D7E;
@@ -47,9 +60,8 @@ table,tr,td,input,a,dl,dt,dd {
     visibility: hidden;
 }
 
-img {
-    vertical-align: top;
-    border: none
+#dropbox:hover{
+    opacity: 0.8;
 }
 .drag {
     width: 50%;
@@ -63,9 +75,6 @@ img {
     align-items: center;
     text-align: center;
     flex-direction: column;
-}
-.drag:hover {
-    opacity: 0.8;
 }
 .cubetext {
     font-size: 10vw;
@@ -81,6 +90,11 @@ img {
     font-weight: 500;
     opacity: 0.4;
 }
+.cubetext2 {
+    font-size: 1.7vw;
+    opacity: 0.5;
+}
+/*BOTTOM of the page*/
 .footer {
     padding: 10px 0 30px 0;
     font-size: 12px;
