@@ -59,7 +59,37 @@ table,tr,td,input,a,dl,dt,dd {
     display: none;
     visibility: hidden;
 }
+img {
+    vertical-align: top;
+    border: none
+}
+.img_box {
+    text-align: center;
+}
+#can {
+    display: none;
+}
+select {
+    height: 35px;
+    font-size: 14px;
+    background-color: #E8FCFC;
+    border: 1px solid #29EAEA;
+    padding: 0 10px;
 
+}
+.options {
+    font-size: 1.5vw;
+    text-align: center;
+    background-color: #EBEEEE;
+}
+.download_Btn{
+  color: black;
+  font-size: 30px;
+  padding: 15px 30px;
+  margin: 10px auto;
+    display:block;
+
+}
 #dropbox:hover{
     opacity: 0.8;
 }

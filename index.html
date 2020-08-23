@@ -7,7 +7,7 @@
 	<title>File Converter</title>
 	<link rel="stylesheet" href="codes/css/main.css" />
 </head>
-<body>
+<body id="dropbox">
 	<header class="header">
 		<div class="logo">
 			<a href="index.html">file converter</a>
@@ -22,17 +22,33 @@
 			<div class="banner-content">
 				<h1>FILE CONVERTER</h1>
 				<p id="description">free online tool converts <b>PNG to JPEG</b>, and <b>VIDEO to AUDIO.</b><br/>
-					this service does not ask for any personal information.</p>
+					this service does not ask for any personal information.<br/><b>Please select Output Format and Quality before you upload.</b></p>
 			</div>
 		</div>
 	</header>
-	<input type="file" name="files" id="files" accept=".jpeg,.jpg,.png" multiple />
-	<div class ="uploadBar">
-		<div class="image-preview" id="imagePreview">
-			
-		</div>
+	<div class="options">
+	<input type="file" name="files" id="files" accept=".jpeg,.jpg,.png,.webp,.svg,.ico,.bmp" multiple />
+	<label id="format"for="select_type">Output Format: </label>
+		<select name="select_type" id="select_type">
+			<option value="jpeg">JPEG</option>
+			<option value="png">PNG</option>
+	</select>
+	<label id="quality" for="select_quality">Quality: </label>
+        <select name="select_quality" id="select_quality">
+            <option value="1">Ultra</option>
+            <option value="0.9">High</option>
+            <option value="0.7">Medium</option>
+            <option value="0.4">Low</option>
+            <option value="0.2">Very Low</option>
+		</select>
 	</div>
-	<label class="drag" for="files" id="dropbox">
+	<button id="download_Btn" class="download_Btn">Download</button>
+	<div class ="uploaded">
+		<div class="img_box" id="img_box"></div>
+		<canvas id="can"></canvas>
+		<div class="pyro" id="pyro"></div>
+	</div>
+	<label class="drag" for="files">
         <div class="cubes">
             <div class="cube1"></div>
             <div class="cube2"></div>
