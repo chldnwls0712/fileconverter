@@ -1,8 +1,8 @@
 let allOkFiles = [],
-    alltType = ['jpg', 'jpeg', 'png','webp', 'svg', 'ico', 'bmp'],
-    outType = ['jpeg', 'png'],
+    alltType = ['mp4','avi','mov'],
+    outType = ['mp3', 'mp4','avi','mov'],
     config = {}
-
+/*
 function setConfig() {
     config.type = document.querySelector('#select_type').value
     config.quality = document.querySelector('#select_quality').value - 0
@@ -155,3 +155,4 @@ function funDownload(content, filename = 'untitled') {
 
   document.body.removeChild(eleLink)
 }
+*/

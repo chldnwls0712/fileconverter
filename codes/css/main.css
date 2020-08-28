@@ -46,9 +46,31 @@ table,tr,td,input,a,dl,dt,dd {
 }
 /*MIDDLE of the page*/
 .banner{
-    background-color: #dbdee0;
+    background-color: #caccce;
     color: #5D6D7E;
     width: 100%; 
+}
+.window{
+    font-size: 1.5vw;
+    text-align: center;
+}
+#img_conv,#vid_conv {
+    text-decoration: none;
+    color: #5D6D7E;
+}
+#vid_conv:hover,#img_conv:hover{
+    color: #5D6D7E;
+    background-color: #EAECEE;
+}
+.icIC {
+    background-color: #EAECEE;
+}
+.vcVC {
+    background-color: #EAECEE;
+}
+.window p {
+    color: greenyellow;
+    background-color: black;
 }
 .banner-content{
     text-align:center;

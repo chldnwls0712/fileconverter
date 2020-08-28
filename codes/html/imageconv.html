@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="free online tool for converting image or video files to the file you want.">
+	<title>File Converter</title>
+	<link rel="stylesheet" href="../css/main.css" />
+</head>
+<body id="dropbox">
+	<header class="header">
+		<div class="logo">
+			<a href="../../index.html">image file converter</a>
+		</div>
+		<div class="language">
+			<a href="#eng" onclick='reloadFuc()'>English,</a>
+			<a href="#esp" onclick="reloadFuc()">Español,</a>
+			<a href="#kor" onclick='reloadFuc()'>한국어</a>
+			
+		</div>
+		<div class="banner">
+			<div class="banner-content">
+				<h1>FILE CONVERTER</h1>
+				<p id="description">free online tool converts <b>PNG to JPEG</b>, and <b>VIDEO to AUDIO.</b><br/>
+					this service does not ask for any personal information.<br/><b>Please select Output Format and Quality before you upload.</b></p>
+			</div>
+			<div class="window">
+				<a class="icIC"id ="img_conv" href="/codes/html/imageconv.html">image file converter</a>
+				<a id ="vid_conv" href="../html/videoconv.html">video file converter</a>
+			</div>
+		</div>
+	</header>
+	<div class="options">
+	<input type="file" name="files" id="files" accept=".jpeg,.jpg,.png,.webp,.svg,.ico,.bmp" multiple />
+	<label id="format"for="select_type">Output Format: </label>
+		<select name="select_type" id="select_type">
+			<option value="jpeg">JPEG</option>
+			<option value="png">PNG</option>
+	</select>
+	<label id="quality" for="select_quality">Quality: </label>
+        <select name="select_quality" id="select_quality">
+            <option value="1">Ultra</option>
+            <option value="0.9">High</option>
+            <option value="0.7">Medium</option>
+            <option value="0.4">Low</option>
+            <option value="0.2">Very Low</option>
+		</select>
+	</div>
+	<button id="download_Btn" class="download_Btn">Download</button>
+	<div class ="uploaded">
+		<div class="img_box" id="img_box"></div>
+		<canvas id="can"></canvas>
+		<div class="pyro" id="pyro"></div>
+	</div>
+	<label class="drag" for="files">
+        <div class="cubes">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+            <div class="cube3"></div>
+            <div class="cube4"></div>
+        </div>
+        <div>
+            <p class="cubetext">+</p>
+			<p id ="fileText"class="cubetext1">Upload the file.</p>
+			<p id ="fileText1"class="cubetext2">(click or drag&drop)</p>
+        </div>
+	</label>
+	<div class="footer">
+		<div>
+			<a href="https://blog.naver.com/cy2003k" target="_blank">Blog</a>
+			<a href="https://www.youtube.com/channel/UCs2_zIPANApaQcWhhWaBzDw?view_as=subscriber" target="_blank">Youtube</a>
+			<a href="https://github.com/chldnwls0712/fileconverter" target="_blank">Github</a>
+		</div>
+	</div>
+	<script src="../js/language.js"></script>
+	<script src="../js/main.js"></script>
+</body>
+</html>

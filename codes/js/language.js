@@ -39,12 +39,26 @@ var convertlanguage = {
     espQ: {
         convertexplain: "Calidad"
     },
+    Kr_imgconv:{
+        menu: "이미지파일 변환기"
+    },
+    Kr_vidconv:{
+        menu: "비디오파일 변환기"
+    },
+    Esp_imgconv:{
+        menu: "convertidor de archivos de imagen"
+    },
+    Esp_vidconv:{
+        menu:"convertidor de archivos de video"
+    }
 }
 //switch language based on the hash
 if(window.location.hash)
 {
     if(window.location.hash == "#kor")
     {
+        document.getElementById("img_conv").innerHTML = convertlanguage.Kr_imgconv.menu;
+        document.getElementById("vid_conv").innerHTML = convertlanguage.Kr_vidconv.menu;
         document.getElementById("description").innerHTML = language.kr.explain;
         document.getElementById("fileText").innerHTML = filelangauge.kr.fileexplain;
         document.getElementById("fileText1").innerHTML = filelangauge.kr1.fileexplain1;
@@ -54,6 +68,8 @@ if(window.location.hash)
     } 
     else if(window.location.hash == "#esp")
     {
+        document.getElementById("img_conv").innerHTML = convertlanguage.Esp_imgconv.menu;
+        document.getElementById("vid_conv").innerHTML = convertlanguage.Esp_vidconv.menu;
         document.getElementById("description").innerHTML = language.esp.explain;
         document.getElementById("fileText").innerHTML = filelangauge.esp.fileexplain;
         document.getElementById("fileText1").innerHTML = filelangauge.esp1.fileexplain1;
