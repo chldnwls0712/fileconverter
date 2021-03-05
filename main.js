@@ -1,4 +1,3 @@
-
 /* page change */
 function PageTitle(num) {
     let title;
@@ -6,23 +5,34 @@ function PageTitle(num) {
         oldFavi = document.getElementById('dynamic-favicon');
     let para;
     let oldmain = document.getElementById('content-child');
+
+    var my_script = document.createElement('script');
+    my_script.setAttribute('src','./conversion.js');
     if(num == 1) {
         title = 'Image Converter';
         favicon.href = 'public/fav2.ico';
-        
+
+        document.querySelectorAll('[src="./conversion.js"]').forEach(e => e.parentNode.removeChild(e));
+
         para = document.createElement("img-converter");
         para.setAttribute("id","content-child"); 
         document.getElementById("content").replaceChild(para, oldmain);
+        document.head.appendChild(my_script);
     } else if(num == 2) {
         title = 'Video Converter';
         favicon.href = 'public/fav3.ico';
 
+        document.querySelectorAll('[src="./conversion.js"]').forEach(e => e.parentNode.removeChild(e));
+
         para = document.createElement("vid-converter");
         para.setAttribute("id","content-child"); 
         document.getElementById("content").replaceChild(para, oldmain);
-    } else {
+        document.head.appendChild(my_script);
+    } else if(num == 0) {
         title = 'File Converter';
         favicon.href = 'public/fav1.ico';
+
+        reloadWin();
     }
     if(oldFavi) {
         document.head.removeChild(oldFavi);
@@ -62,6 +72,17 @@ var Langs = {
     }
 };
 
+var etc = {
+    kr: {
+        output: "형식:",
+        quality: "품질:"
+    },
+    esp: {
+        output: "producción:",
+        quality: "calidad:"
+    }
+};
+
 if(window.location.hash)
 {
     if(window.location.hash == "#kr") {
@@ -70,12 +91,16 @@ if(window.location.hash)
         document.getElementById("language_conv").innerHTML = navLangs.kr.language;
         document.getElementById("intro_p").innerHTML = Langs.kr.intro;
         document.getElementById("desc_p").innerHTML = Langs.kr.desc;
+        document.getElementById("format").innerHTML = etc.kr.output;
+        document.getElementById("quality").innerHTML = etc.kr.quality;
     } else if(window.location.hash == "#esp") {
         document.getElementById("image_conv").innerHTML = navLangs.esp.image;
         document.getElementById("video_conv").innerHTML = navLangs.esp.video;
         document.getElementById("language_conv").innerHTML = navLangs.esp.language;
         document.getElementById("intro_p").innerHTML = Langs.esp.intro;
         document.getElementById("desc_p").innerHTML = Langs.esp.desc;
+        document.getElementById("format").innerHTML = etc.esp.output;
+        document.getElementById("quality").innerHTML = etc.esp.quality;
     } else {
         window.location = window.location.href.substr(0, window.location.href.indexOf("#"));
     }
@@ -96,5 +121,5 @@ window.onclick = function(event) {
 function reloadWin() {
     setTimeout(function () {
       location.reload();
-    }, 100);
-  }
+    }, 10);
+}

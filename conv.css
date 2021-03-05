@@ -1,0 +1,65 @@
+#img_conv,#vid_conv {
+    text-decoration: none;
+    color: #5D6D7E;
+}
+#vid_conv:hover,#img_conv:hover{
+    color: #5D6D7E;
+    background-color: #EAECEE;
+}
+.icIC {
+    background-color: #EAECEE;
+}
+.vcVC {
+    background-color: #EAECEE;
+}
+#files {
+    display: none;
+    visibility: hidden;
+}
+img {
+    vertical-align: top;
+    border: none
+}
+.img_box {
+    text-align: center;
+}
+#can {
+    display: none;
+}
+select {
+    height: 25px;
+    font-size: 13px;
+    background-color: #fcfcfc;
+    border: 1px solid #000;
+    padding: 0 10px;
+
+}
+.options {
+    font-size: 16px;
+    text-align: center;
+}
+.download_Btn{
+  color: black;
+  font-size: 14px;
+}
+#dropbox:hover{
+    opacity: 0.8;
+}
+.drag {
+    width: 50%;
+    background-color: #FFFAF5;
+    border: 2px ridge rgb(0, 0, 0);
+    border-radius: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.cubetext {
+    font-size: 100px;
+    line-height: 100px;
+    height: 400px;
+    opacity: 0.3;
+}
